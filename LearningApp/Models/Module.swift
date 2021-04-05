@@ -8,8 +8,10 @@
 import Foundation
 
 struct Module: Decodable, Identifiable {
-  var id: Int
-  var category: String
-  var content: Content
-  var test: Test
+    
+    //MARK: - VARIABLES
+    var id: Int
+    var category: String
+    var content: Content
+    var test: Test
 }

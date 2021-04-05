@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentViewRow: View {
     
+    //MARK: - VARIABLES
     @EnvironmentObject var model: ContentModel
     var index: Int
     
+    //MARK: - BODY
     var body: some View {
         
         let lesson = model.currentModule!.content.lessons[index]
@@ -42,6 +44,7 @@ struct ContentViewRow: View {
     }
 }
 
+//MARK: - PREVIEW
 struct ContentViewRow_Previews: PreviewProvider {
     static var previews: some View {
         ContentViewRow(index: 1)

@@ -8,9 +8,11 @@
 import Foundation
 
 struct Test: Decodable, Identifiable {
-  var id: Int
-  var image: String
-  var time: String
-  var description: String
-  var questions: [Question]
+    
+    //MARK: - VARIABLES
+    var id: Int
+    var image: String
+    var time: String
+    var description: String
+    var questions: [Question]
 }

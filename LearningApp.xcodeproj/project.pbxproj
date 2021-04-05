@@ -20,6 +20,9 @@
 		ACEBB247261A5CB60085F3BF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB246261A5CB60085F3BF /* Test.swift */; };
 		ACEBB24A261A5CCF0085F3BF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB249261A5CCF0085F3BF /* Question.swift */; };
 		ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB24C261A5CED0085F3BF /* Module.swift */; };
+		F8395E66261B6EBF00B317DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8395E65261B6EBF00B317DB /* Constants.swift */; };
+		F85B2A94261ACDA2009A963E /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B2A93261ACDA2009A963E /* ContentDetailView.swift */; };
+		F85B2A98261AD15F009A963E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85B2A97261AD15F009A963E /* AVKit.framework */; };
 		F8CF36A3261ABBAC009011E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF36A2261ABBAC009011E5 /* ContentView.swift */; };
 		F8CF36A6261AC8DB009011E5 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		ACEBB246261A5CB60085F3BF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		ACEBB249261A5CCF0085F3BF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		ACEBB24C261A5CED0085F3BF /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		F8395E65261B6EBF00B317DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F85B2A93261ACDA2009A963E /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		F85B2A97261AD15F009A963E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F8CF36A2261ABBAC009011E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85B2A98261AD15F009A963E /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,7 @@
 			children = (
 				ACEBB21D261A55B70085F3BF /* LearningApp */,
 				ACEBB21C261A55B70085F3BF /* Products */,
+				F85B2A96261AD15F009A963E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +110,7 @@
 				ACB8C3D9261A67C9004AED6E /* HomeViewRow.swift */,
 				F8CF36A2261ABBAC009011E5 /* ContentView.swift */,
 				F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */,
+				F85B2A93261ACDA2009A963E /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 			children = (
 				ACEBB238261A58D80085F3BF /* data.json */,
 				ACEBB239261A58D80085F3BF /* style.html */,
+				F8395E65261B6EBF00B317DB /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,6 +150,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F85B2A96261AD15F009A963E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F85B2A97261AD15F009A963E /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +238,8 @@
 				ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */,
 				ACEBB21F261A55B70085F3BF /* LearningApp.swift in Sources */,
 				ACEBB236261A567A0085F3BF /* ContentModel.swift in Sources */,
+				F8395E66261B6EBF00B317DB /* Constants.swift in Sources */,
+				F85B2A94261ACDA2009A963E /* ContentDetailView.swift in Sources */,
 				F8CF36A3261ABBAC009011E5 /* ContentView.swift in Sources */,
 				ACEBB247261A5CB60085F3BF /* Test.swift in Sources */,
 				ACEBB244261A5CA00085F3BF /* Lesson.swift in Sources */,

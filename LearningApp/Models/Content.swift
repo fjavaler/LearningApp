@@ -8,9 +8,11 @@
 import Foundation
 
 struct Content: Decodable, Identifiable {
-  var id: Int
-  var image: String
-  var time: String
-  var description: String
-  var lessons: [Lesson]
+    
+    //MARK: - VARIABLES
+    var id: Int
+    var image: String
+    var time: String
+    var description: String
+    var lessons: [Lesson]
 }

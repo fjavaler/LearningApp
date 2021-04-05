@@ -8,44 +8,70 @@
 import Foundation
 
 class ContentModel: ObservableObject {
-  @Published var modules = [Module]()
-  var styleData: Data?
-  
-  init() {
-    getLocalData()
-  }
-  
-  func getLocalData() {
-    // Parse the data.json file
-    // Get a URL to the JSON file
-    let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
+    // List of models
+    @Published var modules = [Module]()
     
-    do {
-      // Read the file into a data object
-      let jsonData = try Data(contentsOf: jsonUrl!)
-      
-      // Try to decode the JSON into an array of modules
-      let jsonDecoder = JSONDecoder()
-      let modules = try jsonDecoder.decode([Module].self, from: jsonData)
-      
-      // Assign parsed modules to class' modules property
-      self.modules = modules
-    } catch {
-      // TODO log error
-      fatalError("\(error)")
+    // Current module
+    @Published var currentModule: Module?
+    var currentModuleIndex = 0
+    
+    var styleData: Data?
+    
+    init() {
+        getLocalData()
     }
     
-    // Parse the style.html data
-    let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
-    
-    do {
-      // Read the file into a data object
-      let styleData = try Data(contentsOf: styleUrl!)
-      
-      // Assign parsed data to class' styleData property
-      self.styleData = styleData
-    } catch {
-      fatalError("\(error)")
+    // MARK: - Data Methods
+    func getLocalData() {
+        // Parse the data.json file
+        // Get a URL to the JSON file
+        let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
+        
+        do {
+            // Read the file into a data object
+            let jsonData = try Data(contentsOf: jsonUrl!)
+            
+            // Try to decode the JSON into an array of modules
+            let jsonDecoder = JSONDecoder()
+            let modules = try jsonDecoder.decode([Module].self, from: jsonData)
+            
+            // Assign parsed modules to class' modules property
+            self.modules = modules
+        } catch {
+            // TODO log error
+            fatalError("\(error)")
+        }
+        
+        // Parse the style.html data
+        let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
+        
+        do {
+            // Read the file into a data object
+            let styleData = try Data(contentsOf: styleUrl!)
+            
+            // Assign parsed data to class' styleData property
+            self.styleData = styleData
+        } catch {
+            fatalError("\(error)")
+        }
     }
-  }
+    
+    // MARK: - Module Navigation Methods
+    func beginModule(_ moduleId: Int) {
+        
+        // Find the index for this module id
+        for index in 0..<modules.count {
+            
+            if modules[index].id == moduleId {
+                
+                // Found the matching module
+                currentModuleIndex = index
+                break
+            }
+            
+        }
+        
+        // Set the current module
+        currentModule = modules[currentModuleIndex]
+    }
 }

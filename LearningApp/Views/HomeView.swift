@@ -31,11 +31,13 @@ struct HomeView: View {
                             VStack (spacing: 20) {
                                 
                                 NavigationLink(
+                                  
                                     destination: ContentView()
                                         .onAppear(perform: {
                                             model.beginModule(module.id)
                                         }),
                                     label: {
+                                      
                                         // Learning card
                                         HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                     })

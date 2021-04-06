@@ -9,76 +9,78 @@ import SwiftUI
 import AVKit
 
 struct ContentDetailView: View {
-  
-  //MARK: - VARIABLES
-  @EnvironmentObject var model: ContentModel
-  
-  //MARK: - BODY
-  var body: some View {
     
-    // Current lesson being displayed
-    let lesson = model.currentLesson
+    //MARK: - VARIABLES
+    @EnvironmentObject var model: ContentModel
     
-    // Get media URL
-    let url = URL(string: Constants.videoHostUrl + (lesson?.video ?? ""))
-    
-    VStack {
-      
-      // Only show video if we get a valid URL
-      if url != nil {
-        VideoPlayer(player: AVPlayer(url: url!))
-          .cornerRadius(10)
-      }
-      
-      // Description
-      CodeTextView()
+    //MARK: - BODY
+    var body: some View {
         
-      // Show next lesson button, only if there is a next lesson
-      if model.hasNextLesson() {
+        // Current lesson being displayed
+        let lesson = model.currentLesson
         
-        // Advance lesson button
-        Button(action: {
-          
-          // Advance the lesson
-          model.nextLesson()
-        }, label: {
-          ZStack {
+        // Get media URL
+        let url = URL(string: Constants.videoHostUrl + (lesson?.video ?? ""))
+        
+        VStack {
             
-            RectangleCard(color: Color.green)
-                .frame(height: 48)
+            // Only show video if we get a valid URL
+            if url != nil {
+                VideoPlayer(player: AVPlayer(url: url!))
+                    .cornerRadius(10)
+            }
             
-            Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
-              .foregroundColor(.white)
-              .bold()
-          }
-        })
-      } else {
-        // Show the complete button instead
-        Button(action: {
-          
-          // Take the user back to the home view
-            model.currentContentSelected = nil
-        }, label: {
-          ZStack {
+            // Description
+            CodeTextView()
             
-            RectangleCard(color: Color.green)
-                .frame(height: 48)
-            
-            Text("Complete")
-              .foregroundColor(.white)
-              .bold()
-          }
-        })
-      }
+            // Show next lesson button, only if there is a next lesson
+            if model.hasNextLesson() {
+                
+                // Advance lesson button
+                Button(action: {
+                    
+                    // Advance the lesson
+                    model.nextLesson()
+                }, label: {
+                    ZStack {
+                        
+                        RectangleCard(color: Color.green)
+                            .frame(height: 48)
+                        
+                        Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                })
+            } else {
+                // Show the complete button instead
+                Button(action: {
+                    
+                    // Take the user back to the home view
+                    model.currentContentSelected = nil
+                }, label: {
+                    ZStack {
+                        
+                        RectangleCard(color: Color.green)
+                            .frame(height: 48)
+                        
+                        Text("Complete")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                })
+            }
+        }
+        .padding()
+        .navigationBarTitle(lesson?.title ?? "")
     }
-    .padding()
-    .navigationBarTitle(lesson?.title ?? "")
-  }
 }
 
 //MARK: - PREVIEW
 struct ContentDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentDetailView()
-  }
+    @StateObject static var model = ContentModel()
+    static var previews: some View {
+        ContentDetailView()
+            .environmentObject(model)
+    }
 }

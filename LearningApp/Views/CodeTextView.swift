@@ -31,7 +31,9 @@ struct CodeTextView: UIViewRepresentable {
 }
 
 struct CodeTextView_Previews: PreviewProvider {
+    @StateObject static var model = ContentModel()
     static var previews: some View {
         CodeTextView()
+            .environmentObject(model)
     }
 }

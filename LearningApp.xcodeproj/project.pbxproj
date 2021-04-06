@@ -20,6 +20,7 @@
 		ACEBB247261A5CB60085F3BF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB246261A5CB60085F3BF /* Test.swift */; };
 		ACEBB24A261A5CCF0085F3BF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB249261A5CCF0085F3BF /* Question.swift */; };
 		ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB24C261A5CED0085F3BF /* Module.swift */; };
+		F83831B5261C1B2700AEDCB3 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83831B4261C1B2700AEDCB3 /* RectangleCard.swift */; };
 		F8395E66261B6EBF00B317DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8395E65261B6EBF00B317DB /* Constants.swift */; };
 		F85B2A94261ACDA2009A963E /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B2A93261ACDA2009A963E /* ContentDetailView.swift */; };
 		F85B2A98261AD15F009A963E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85B2A97261AD15F009A963E /* AVKit.framework */; };
@@ -44,6 +45,7 @@
 		ACEBB246261A5CB60085F3BF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		ACEBB249261A5CCF0085F3BF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		ACEBB24C261A5CED0085F3BF /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		F83831B4261C1B2700AEDCB3 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		F8395E65261B6EBF00B317DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F85B2A93261ACDA2009A963E /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		F85B2A97261AD15F009A963E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -114,6 +116,7 @@
 				F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */,
 				F85B2A93261ACDA2009A963E /* ContentDetailView.swift */,
 				F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */,
+				F83831B4261C1B2700AEDCB3 /* RectangleCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				F8CF36A6261AC8DB009011E5 /* ContentViewRow.swift in Sources */,
 				ACEBB221261A55B70085F3BF /* HomeView.swift in Sources */,
 				ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */,
+				F83831B5261C1B2700AEDCB3 /* RectangleCard.swift in Sources */,
 				ACEBB24A261A5CCF0085F3BF /* Question.swift in Sources */,
 				F8D04525261BFEAF00AC26E4 /* CodeTextView.swift in Sources */,
 				ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */,

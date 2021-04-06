@@ -93,7 +93,7 @@
 				ACEBB231261A560F0085F3BF /* ViewModels */,
 				ACEBB232261A56150085F3BF /* Models */,
 				ACEBB233261A56210085F3BF /* Resources */,
-				ACEBB234261A562D0085F3BF /* Helpers */,
+				F83B7FAD261D1671009A0FF5 /* Helpers */,
 				ACEBB222261A55B80085F3BF /* Assets.xcassets */,
 				ACEBB227261A55B80085F3BF /* Info.plist */,
 				ACEBB224261A55B80085F3BF /* Preview Content */,
@@ -154,7 +154,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		ACEBB234261A562D0085F3BF /* Helpers */ = {
+		F83B7FAD261D1671009A0FF5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 			);

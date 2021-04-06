@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC44154F261CE25200DDC531 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44154E261CE25200DDC531 /* TestView.swift */; };
 		ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8C3D9261A67C9004AED6E /* HomeViewRow.swift */; };
 		ACEBB21F261A55B70085F3BF /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB21E261A55B70085F3BF /* LearningApp.swift */; };
 		ACEBB221261A55B70085F3BF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB220261A55B70085F3BF /* HomeView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC44154E261CE25200DDC531 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		ACB8C3D9261A67C9004AED6E /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		ACEBB21B261A55B70085F3BF /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEBB21E261A55B70085F3BF /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				F85B2A93261ACDA2009A963E /* ContentDetailView.swift */,
 				F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */,
 				F83831B4261C1B2700AEDCB3 /* RectangleCard.swift */,
+				AC44154E261CE25200DDC531 /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				ACEBB221261A55B70085F3BF /* HomeView.swift in Sources */,
 				ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */,
 				F83831B5261C1B2700AEDCB3 /* RectangleCard.swift in Sources */,
+				AC44154F261CE25200DDC531 /* TestView.swift in Sources */,
 				ACEBB24A261A5CCF0085F3BF /* Question.swift in Sources */,
 				F8D04525261BFEAF00AC26E4 /* CodeTextView.swift in Sources */,
 				ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */,

@@ -25,6 +25,7 @@
 		F85B2A98261AD15F009A963E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85B2A97261AD15F009A963E /* AVKit.framework */; };
 		F8CF36A3261ABBAC009011E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF36A2261ABBAC009011E5 /* ContentView.swift */; };
 		F8CF36A6261AC8DB009011E5 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */; };
+		F8D04525261BFEAF00AC26E4 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F85B2A97261AD15F009A963E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F8CF36A2261ABBAC009011E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				F8CF36A2261ABBAC009011E5 /* ContentView.swift */,
 				F8CF36A5261AC8DB009011E5 /* ContentViewRow.swift */,
 				F85B2A93261ACDA2009A963E /* ContentDetailView.swift */,
+				F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				ACEBB221261A55B70085F3BF /* HomeView.swift in Sources */,
 				ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */,
 				ACEBB24A261A5CCF0085F3BF /* Question.swift in Sources */,
+				F8D04525261BFEAF00AC26E4 /* CodeTextView.swift in Sources */,
 				ACEBB24D261A5CED0085F3BF /* Module.swift in Sources */,
 				ACEBB21F261A55B70085F3BF /* LearningApp.swift in Sources */,
 				ACEBB236261A567A0085F3BF /* ContentModel.swift in Sources */,

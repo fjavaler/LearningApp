@@ -36,10 +36,17 @@ class ContentModel: ObservableObject {
     
     //MARK: - INITIALIZER
     init() {
+        
+        // Parse local included JSON data
         getLocalData()
+        
+        // Download remote JSON file and parse data
+        getRemoteData()
     }
     
     // MARK: - Data Methods
+    
+    /// Parse local included JSON data
     func getLocalData() {
         
         // Parse the data.json file
@@ -75,6 +82,60 @@ class ContentModel: ObservableObject {
         } catch {
             fatalError("\(error)")
         }
+    }
+    
+    /// Download remote JSON file and parse data
+    func getRemoteData() {
+        
+        // String path
+        let urlString = "https://fjavaler.github.io/LearningApp-Data/data2.json"
+        
+        // Create a URL object
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // Couldn't create a URL
+            return
+        }
+        
+        // Create a URLRequest object
+        let request = URLRequest(url: url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            
+            // Check if there's an error
+            guard error == nil else {
+                
+                // There was an error
+                return
+            }
+            
+            // Decode JSON
+            do {
+                
+                // Create JSON decoder
+                let decoder = JSONDecoder()
+                
+                // Decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // Append parsed modules into modules property
+                self.modules += modules
+            } catch {
+                
+                // Couldn't parse JSON
+                print(error)
+            }
+            
+            // Handle the response
+            
+        }
+        
+        // Kick off the data task
+        dataTask.resume()
     }
     
     // MARK: - Module Navigation Methods

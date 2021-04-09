@@ -24,7 +24,7 @@ struct TestResultView: View {
         if pct > 0.5 {
             return "Awesome"
         } else if pct > 0.2 {
-            return "Doung great!"
+            return "Doing great!"
         } else {
             return "Keep learning."
         }

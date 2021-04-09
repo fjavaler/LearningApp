@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TestView: View {
     
+    //MARK: - VARIABLES
     @EnvironmentObject var model: ContentModel
     @State var selectedAnswerIndex: Int?
     @State var numCorrect = 0
     @State var submitted = false
     
+    //MARK: - BODY
     var body: some View {
         
         if model.currentQuestion != nil {
@@ -44,13 +46,13 @@ struct TestView: View {
                                     // If answer hasn't been submitted
                                     if submitted == false {
                                         
-                                    RectangleCard(color: index == selectedAnswerIndex ? .gray : .white)
-                                        .frame(height: 48)
+                                        RectangleCard(color: index == selectedAnswerIndex ? .gray : .white)
+                                            .frame(height: 48)
                                     } else {
                                         
                                         // Answer has been submitted
                                         if index == selectedAnswerIndex &&
-                                           index == model.currentQuestion!.correctIndex {
+                                            index == model.currentQuestion!.correctIndex {
                                             
                                             // User has selected the right answer. Show a green background
                                             RectangleCard(color: .green)
@@ -125,9 +127,9 @@ struct TestView: View {
             }
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
         } else {
-          
-          // If current question is nil, we show the result view
-          TestResultView()
+            
+            // If current question is nil, we show the result view
+            TestResultView(numCorrect: numCorrect)
         }
     }
     
@@ -145,7 +147,7 @@ struct TestView: View {
                 // There is a next question
                 return "Next"
             }
-           
+            
         } else {
             
             // Submit answer
@@ -155,8 +157,11 @@ struct TestView: View {
     }
 }
 
+//MARK: - PREVIEW
 struct TestView_Previews: PreviewProvider {
+    @StateObject static var model = ContentModel()
     static var previews: some View {
         TestView()
+            .environmentObject(model)
     }
 }

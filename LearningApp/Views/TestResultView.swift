@@ -8,44 +8,70 @@
 import SwiftUI
 
 struct TestResultView: View {
-  
-  @EnvironmentObject var model: ContentModel
-  
+    
+    //MARK: - VARIABLES
+    @EnvironmentObject var model: ContentModel
+    var numCorrect: Int
+    
+    var resultHeading: String {
+        
+        guard model.currentModule != nil else {
+            return ""
+        }
+        
+        let pct = Double(numCorrect)/Double(model.currentModule!.test.questions.count)
+        
+        if pct > 0.5 {
+            return "Awesome"
+        } else if pct > 0.2 {
+            return "Doung great!"
+        } else {
+            return "Keep learning."
+        }
+        
+    }
+    
+    //MARK: - BODY
     var body: some View {
-      VStack {
         
-        Spacer()
-        
-        Text("Doing great!")
-          .font(.title)
-        
-        Spacer()
-        
-        Text("You got X out of X questions right")
-        
-        Spacer()
-        
-        Button(action: {
-          
-          // Send the user back the home view
-          model.currentTestSelected = nil
-        }, label: {
-          ZStack {
+        VStack {
             
-            RectangleCard(color: .green)
-              .frame(height: 48)
+            Spacer()
             
-            Text("Complete")
-              .bold()
-              .foregroundColor(.white)
-          }
-        })
-      }
+            Text(resultHeading)
+                .font(.title)
+            
+            Spacer()
+            
+            Text("You got \(numCorrect) out of \(model.currentModule?.test.questions.count ?? 0) questions right")
+            
+            Spacer()
+            
+            Button(action: {
+                
+                // Send the user back the home view
+                model.currentTestSelected = nil
+            }, label: {
+                ZStack {
+                    
+                    RectangleCard(color: .green)
+                        .frame(height: 48)
+                    
+                    Text("Complete")
+                        .bold()
+                        .foregroundColor(.white)
+                }
+            })
+            .padding(.horizontal)
+        }
     }
 }
 
+//MARK: - PREVIEW
 struct TestResultView_Previews: PreviewProvider {
+    @StateObject static var model = ContentModel()
     static var previews: some View {
-        TestResultView()
+        TestResultView(numCorrect: 4)
+            .environmentObject(model)
     }
 }

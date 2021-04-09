@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CodeTextView: UIViewRepresentable {
     
+    //MARK: - VARIABLES
     @EnvironmentObject var model: ContentModel
     
+    //MARK: - METHODS
     func makeUIView(context: Context) -> UITextView {
         
         let textView = UITextView()
@@ -30,6 +32,7 @@ struct CodeTextView: UIViewRepresentable {
     }
 }
 
+//MARK: - PREVIEWS
 struct CodeTextView_Previews: PreviewProvider {
     @StateObject static var model = ContentModel()
     static var previews: some View {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC40940F2620B87E0045FFAE /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40940E2620B87E0045FFAE /* TestResultView.swift */; };
 		AC44154F261CE25200DDC531 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44154E261CE25200DDC531 /* TestView.swift */; };
 		ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8C3D9261A67C9004AED6E /* HomeViewRow.swift */; };
 		ACEBB21F261A55B70085F3BF /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB21E261A55B70085F3BF /* LearningApp.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC40940E2620B87E0045FFAE /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		AC44154E261CE25200DDC531 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		ACB8C3D9261A67C9004AED6E /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		ACEBB21B261A55B70085F3BF /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				F8D04524261BFEAF00AC26E4 /* CodeTextView.swift */,
 				F83831B4261C1B2700AEDCB3 /* RectangleCard.swift */,
 				AC44154E261CE25200DDC531 /* TestView.swift */,
+				AC40940E2620B87E0045FFAE /* TestResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CF36A6261AC8DB009011E5 /* ContentViewRow.swift in Sources */,
+				AC40940F2620B87E0045FFAE /* TestResultView.swift in Sources */,
 				ACEBB221261A55B70085F3BF /* HomeView.swift in Sources */,
 				ACB8C3DA261A67C9004AED6E /* HomeViewRow.swift in Sources */,
 				F83831B5261C1B2700AEDCB3 /* RectangleCard.swift in Sources */,

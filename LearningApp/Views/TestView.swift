@@ -124,6 +124,10 @@ struct TestView: View {
                 .disabled(selectedAnswerIndex == nil)
             }
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+        } else {
+          
+          // If current question is nil, we show the result view
+          TestResultView()
         }
     }
     
